@@ -1,5 +1,6 @@
 from function.chuckDiv import chunkLoad
 from function.extractFile import extractPdfFile
+from function.CreateJson import createJSONArt
 
 
 try:
@@ -14,4 +15,5 @@ except Exception as e:
     texto_completo = ""
 
 if texto_completo:
-    chunkLoad(texto_completo)
+
+    createJSONArt(chunkLoad(texto_completo),"Artigos extraidos.json")
